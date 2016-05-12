@@ -1,7 +1,5 @@
 package com.javarush.test.level07.lesson09.task05;
 
-import jdk.management.resource.internal.inst.FileOutputStreamRMHooks;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -17,33 +15,27 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        ArrayList <String> list = new ArrayList<>();
-
+        ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++)
-        {
-            String s = reader.readLine();
-            list.add(s);
-        }
-        //Считать строки с консоли и объявить ArrayList list тут
+            list.add(reader.readLine());
 
         ArrayList<String> result = doubleValues(list);
 
         for (int i = 0; i < result.size(); i++)
-        {
             System.out.println(result.get(i));
-        }
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list)
     {
+        ArrayList<String> list2 = new ArrayList<>();
+        int counter = -1;
         for (int i = 0; i < list.size(); i++)
         {
-            String stri = list.get(i);
-            list.add(i+1, stri);
-
-
+            counter++;
+            list2.add(counter, list.get(i));
+            counter++;
+            list2.add(counter, list.get(i));
         }
-        return null;
+        return list2;
     }
 }
