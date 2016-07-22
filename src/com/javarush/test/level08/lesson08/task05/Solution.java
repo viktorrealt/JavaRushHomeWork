@@ -51,20 +51,15 @@ public class Solution
             for(Map.Entry<String, String> pairCopy: copy.entrySet())
             {
                 String copyValue = pairCopy.getValue();
-
                 if (main.equals(copyValue))
                     counter++;
                 if (counter > 1)
-                {
                     process.add(main);
-                }
             }
         }
 
         for (String s: process)
-        {
             removeItemFromMapByValue(map, s);
-        }
     }
 
     public static void removeItemFromMapByValue(HashMap<String, String> map, String value)
