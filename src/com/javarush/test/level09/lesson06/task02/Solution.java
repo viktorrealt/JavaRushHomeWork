@@ -15,7 +15,7 @@ public class Solution
         String s = null;
         try
         {
-        String m = s.toLowerCase();
+            String m = s.toLowerCase();
         }
         catch (NullPointerException e)
         {
