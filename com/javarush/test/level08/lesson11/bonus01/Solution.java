@@ -17,11 +17,11 @@ public class Solution
         HashMap<Integer, String> year = new HashMap<>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String month = reader.readLine();
-        returnMounth(year, month);
+        returnMonth(year, month);
 
     }
 
-    public static void returnMounth(HashMap<Integer, String> year, String month)
+    public static void returnMonth(HashMap<Integer, String> year, String month)
     {
         year.put(1, "January");
         year.put(2, "February");
