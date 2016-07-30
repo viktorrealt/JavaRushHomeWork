@@ -23,13 +23,13 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         char[] input = reader.readLine().toCharArray();
-        String first = "";
+        String first = ""; //Инициализируем переменную, заполняем пустым значением
         String second = "";
         for (int i = 0; i < input.length; i++)
         {
             if (isVowel(input[i]))
                 first += input[i] + " ";
-            else if(input[i] == ' ')
+            else if(input[i] == ' ') //если значение пробел - пропускаем его, что бы не допустить дублирования пробелов.
                 continue;
             else
                 second += input[i] + " ";
